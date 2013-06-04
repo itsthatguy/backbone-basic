@@ -1,0 +1,6 @@
+- thing = @thing.toJSON()
+%img(src="http://placekitten.com/60/60")
+%div
+  %h4= thing.name
+  %p= thing.address.line1
+.others

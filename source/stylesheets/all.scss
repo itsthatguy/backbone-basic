@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+@import 'things';
+
+body {
+  background: #d4d4d4 url("../images/background.png");
+  font-family: sans-serif; }
+
+h1, h2 {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 32px;
+  letter-spacing: -1px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  padding: 20px 0 10px;
+  margin: 0; }
+
+h2 { font-size: 24px; }
+
+.doc {
+  font-size: 14px;
+  margin: 0; }
+  .doc:before,
+  .doc:after {
+    opacity: .2;
+    padding: 6px;
+    font-style: normal;
+    position: relative;
+    content: "•"; }
+  .doc a {
+    color: rgba(0, 0, 0, 0.3); }
+    .doc a:hover {
+      color: #666; }
+
+.welcome {
+  -webkit-animation-name: welcome;
+  -webkit-animation-duration: .6s; }
+
+@-webkit-keyframes welcome {
+  from {
+    margin-top: 20px;
+    opacity: 0;
+  }
+  50% {
+   margin-top: 20px;
+   opacity: 0;
+  }
+  82.5% {
+    margin-top: 0;
+    -webkit-animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  to {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,43 @@
+.things {
+  width: 960px;
+  margin: 0 auto;
+
+  h4 { margin: 0 0 6px 0; }
+  .thing {
+    @include border-radius(4px);
+    @include box-shadow(0 1px 2px rgba(0,0,0, .23),
+                        inset 0 1px 0 rgba(255,255,255, .6));
+    @include inline-block;
+    background: rgba(235,235,235, .8);
+    margin-bottom: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    position: relative;
+    vertical-align: top;
+    width: 280px;
+
+    > div { max-width: 200px; }
+
+    &:hover { background: rgba(245,245,245, .9); }
+
+    p { font-size: 12px; margin: 0; }
+
+    img {
+      @include box-shadow(inset 0 0 0 1px rgba(250,250,250, .25));
+      @include inline-block;
+      margin-right: 5px; }
+
+    & > div { @include inline-block;
+      vertical-align: top; }
+
+    .name { text-align: left; }
+    .others {
+      display: none;
+      font-size: 12px;
+      color: #aaa;
+      right: 10px;
+      bottom: 12px;
+      position: absolute; }
+  }
+
+}
